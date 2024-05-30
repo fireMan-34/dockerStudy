@@ -13,9 +13,12 @@ for (let i = 0; i < len; i += 1) {
 }
 
 const server = new Server((req, res) => {
+  let resEnd = readFileSync('./html/index.html', { encoding: 'utf8' });
+
+  resEnd += `from ${process.env.STUDY}`;
 
   res.end(
-    readFileSync('./html/index.html', { encoding: 'utf8' }),
+    resEnd,
   )
 });
 

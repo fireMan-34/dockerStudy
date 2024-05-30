@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon index.js",
+    "build": "node index.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
