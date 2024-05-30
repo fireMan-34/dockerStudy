@@ -12,7 +12,12 @@ ARG process.env.BUILD=DOCKER
 ENV STUDY = DOCKER
 
 # 复制目录到当前 docker 根目录
-COPY /app /
+COPY /app/package.json /app/package.json
+COPY /app/yarn.lock /app/yarn.lock
+COPY /app/index.js /app/index.js
+COPY /app/scripts /app/scripts
+COPY /app/html /app/html
+COPY /app/db /app/db
 
 # 工作空间
 WORKDIR /app
